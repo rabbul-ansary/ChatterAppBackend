@@ -32,7 +32,8 @@ app.use((req, res, next) => {
         app.use(`/api`, require(path.join(__dirname, 'src/routes/', file)));
     });
     const server = http.createServer(app);
-    server.listen(process.env.PORT, () => {
+    const port = process.env.PORT || 80;
+    server.listen(port, () => {
         console.log('server is running on port 2000');
     });
 })();
