@@ -35,7 +35,7 @@ class UserController {
             if (!req.body.username || !req.body.password) {
                 return res.status(400).send({ status: 400, message: "Username and password are required!" });
             }
-            let user = await User.create({ username: req.body.username, password: req.body.password });
+            let user = await userModel.create({ username: req.body.username, password: req.body.password });
             if (!user) {
                 return null;
             }
