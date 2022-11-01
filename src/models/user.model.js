@@ -5,9 +5,10 @@ const status = ['Active', 'Inactive'];
 const bools = [true, false];
 
 const UserSchema = new Schema({
-    firstName: { type: String, required: true, index: true },
-    lastName: { type: String, required: true, index: true },
+    username: { type: String, required: true, index: true },
     email: { type: String, required: true, index: true },
+    password: { type: String, required: true, index: true },
+    
     status: { type: String, default: 'Active', enum: status },
     isDeleted: { type: String, default: false, enum: bools },
 }, { timestamps: true, versionKey: false });

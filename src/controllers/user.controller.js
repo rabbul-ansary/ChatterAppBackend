@@ -12,10 +12,12 @@ class UserController {
         try {
             res.send(`
             <form action="register" method="post" enctype="multipart/form-data">
-            <label for="fname">First name:</label><br>
+            <label for="fname">Username:</label><br>
             <input type="text" id="fname" name="username" value="John"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="password" value="Doe"><br><br>
+            <label for="lname">Email:</label><br>
+            <input type="text" id="lname" name="email" value="Doe"><br><br>
+            <label for="lname">Password:</label><br>
+            <input type="password" id="lname" name="password" value="password"><br><br>
             <input type="submit" value="Submit">
             </form> 
             `);
