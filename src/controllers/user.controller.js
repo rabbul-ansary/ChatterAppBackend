@@ -11,7 +11,7 @@ class UserController {
     async registerPage(req, res) {
         try {
             res.send(`
-            <form action="/register" method="post" enctype="multipart/form-data">
+            <form action="register" method="post" enctype="multipart/form-data">
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="username" value="John"><br>
             <label for="lname">Last name:</label><br>
