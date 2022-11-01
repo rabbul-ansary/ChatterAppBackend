@@ -7,7 +7,7 @@ class AdminController {
      */
     async admin(req, res) {
         try {
-            res.send('Hello');
+            res.send('Hello, ' + req.ip_address);
         } catch (error) {
             return res.status(500).send({status: 500, message: error.message})
         }
